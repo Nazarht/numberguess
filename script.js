@@ -3,11 +3,6 @@ let computerScore = 0;
 let currentRoundNumber = 1;
 
 // Write your code below:
-function alert(user) {
-    if (user > 9 || user < 0) {
-        return 'You are choosing the wrong number!'
-    }
-}
 
 function generateTarget() {
     return Math.floor(Math.random() * 10)
@@ -21,7 +16,7 @@ function compareGuesses(user, computer , secret) {
     let computerDist = getAbsoluteDistance(computer , secret)
     let userDist = getAbsoluteDistance(user , secret)
     if (user > 9 || user < 0) {
-        window.alert('You are choosing the wrong number!')
+        alert('You are choosing the wrong number!')
     } else if (user === secret) {
         return true;
     } else if (userDist < computerDist) {
